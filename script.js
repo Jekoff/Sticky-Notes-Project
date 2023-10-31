@@ -1,7 +1,7 @@
 var container2 = document.getElementsByClassName("container2")[0];
 var container3 = document.getElementsByClassName("container3")[0];
-var checkIcon = document.getElementsByClassName("check-icon")[0];
-var xIcon = document.getElementsByClassName("x-icon")[0];
+var checkIcon = document.getElementById("check-icon");
+var xIcon = document.getElementById("x-icon");
 
 var i = 0;
 
@@ -47,13 +47,14 @@ node0.addEventListener("mouseenter", function(){
     node0.style.transform = "scale(1.1)";
 })
 
-mode0.addEventListener("mouseLeave", function(){
+node0.addEventListener("mouseleave", function() {
     node0.style.transform = "scale(1)";
-})
+});
 
-node0.addEventListener(dblclick, function(){
+node0.addEventListener("dblclick", function() {
     node0.remove();
-})
+});
+
 
 document.getElementById("note-text").value = "";
 
